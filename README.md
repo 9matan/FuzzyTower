@@ -1,4 +1,4 @@
-# Tauriel
+# Fuzzy Tower
 Tower defense engine
 
 # References:

@@ -152,5 +152,5 @@ install_manifest.txt
 .vs/
 Debug/
 bin/
-.db
-.opendb
+*.db
+*.opendb

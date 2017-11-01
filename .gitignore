@@ -149,6 +149,7 @@ cmake_install.cmake
 install_manifest.txt
 
 ### FuzzyTower ###
+.vs/
 Debug/
 bin/
 .db

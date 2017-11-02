@@ -1,0 +1,53 @@
+Engine: DamageLogic
+InputVariable: MagicAttack
+  enabled: true
+  range: 0.000 20.000
+  lock-range: true
+  term: adept Trapezoid 0.000 3.000 4.000 9.000
+  term: wizard Trapezoid 4.000 9.000 12.000 20.000
+  term: master Ramp 12.000 20.000
+InputVariable: MagicDefense
+  enabled: true
+  range: 0.000 20.000
+  lock-range: true
+  term: sensitive Ramp 8.000 0.000 
+  term: resistant Trapezoid 0.000 8.000 12.000 20.000
+  term: antimage Ramp 12.000 20.000
+OutputVariable: MagicDamageCoef
+  enabled: true
+  range: 0.000 2.000
+  lock-range: true
+  aggregation: Maximum
+  defuzzifier: SmallestOfMaximum
+  default: nan
+  lock-previous: false
+  term: normal Ramp 0.000 1.000
+  term: critical Ramp 0.800 1.500
+  term: double Ramp 1.000 2.000
+  
+RuleBlock: 
+  enabled: true
+  conjunction: Minimum
+  disjunction: Maximum
+  implication: Minimum
+  activation: General
+  # Adept
+  rule: if MagicAttack is adept and MagicDefense is somewhat sensitive then MagicDamageCoef is normal
+  rule: if MagicAttack is adept and MagicDefense is sensitive then MagicDamageCoef is normal with 0.800
+  rule: if MagicAttack is adept and MagicDefense is resistant then MagicDamageCoef is normal with 0.500
+  rule: if MagicAttack is adept and MagicDefense is antimage then MagicDamageCoef is normal with 0.000
+  # Wizard
+  rule: if MagicAttack is wizard and MagicDefense is somewhat sensitive then MagicDamageCoef is very normal
+  rule: if MagicAttack is wizard and MagicDefense is sensitive then MagicDamageCoef is normal
+  rule: if MagicAttack is wizard and MagicDefense is resistant then MagicDamageCoef is normal with 0.600
+  rule: if MagicAttack is wizard and MagicDefense is antimage then MagicDamageCoef is normal with 0.200
+  # Master
+  rule: if MagicAttack is master and MagicDefense is somewhat sensitive then MagicDamageCoef is critical
+  rule: if MagicAttack is master and MagicDefense is sensitive then MagicDamageCoef is very normal
+  rule: if MagicAttack is master and MagicDefense is resistant then MagicDamageCoef is normal with 0.750
+  rule: if MagicAttack is master and MagicDefense is antimage then MagicDamageCoef is normal with 0.300
+  # Very master
+  rule: if MagicAttack is very master and MagicDefense is somewhat sensitive then MagicDamageCoef is double
+  rule: if MagicAttack is very master and MagicDefense is sensitive then MagicDamageCoef is critical with 0.9
+  rule: if MagicAttack is very master and MagicDefense is resistant then MagicDamageCoef is normal with 0.9
+  rule: if MagicAttack is very master and MagicDefense is antimage then MagicDamageCoef is normal with 0.4

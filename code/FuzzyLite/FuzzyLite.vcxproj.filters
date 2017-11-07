@@ -318,9 +318,6 @@
     <ClCompile Include="fuzzylite\fuzzylite\src\fuzzylite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fuzzylite\fuzzylite\src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fuzzylite\fuzzylite\fl\activation\Activation.h">

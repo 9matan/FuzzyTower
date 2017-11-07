@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="towerdefenseengine\src\main.cpp" />
+    <ClCompile Include="towerdefenseengine\src\fightSystem\FuzzyFightSystem.cpp" />
+    <ClCompile Include="towerdefenseengine\tdeInterface\dataSystem\IDataSystem.cpp" />
+    <ClCompile Include="towerdefenseengine\src\dataSystem\DataSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="towerdefenseengine\tdeInterface\IGame.h" />
+    <ClInclude Include="towerdefenseengine\common\Vec2.h" />
+    <ClInclude Include="towerdefenseengine\TypeDefs.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\unit\IGameUnit.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\unit\warrior\IWarrior.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\unit\warrior\ICombatWarrior.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\unit\tower\ICombatTower.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\unit\tower\ITower.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\fightSystem\IFightSystem.h" />
+    <ClInclude Include="towerdefenseengine\tde\fightSystem\FuzzyFightSystem.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\dataSystem\IDataSystem.h" />
+    <ClInclude Include="towerdefenseengine\tde\dataSystem\DataSystem.h" />
+  </ItemGroup>
+</Project>

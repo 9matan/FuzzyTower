@@ -115,10 +115,14 @@
   <ItemGroup>
     <ClCompile Include="towerdefenseengine\src\main.cpp" />
     <ClCompile Include="towerdefenseengine\src\fightSystem\FuzzyFightSystem.cpp" />
-    <ClCompile Include="towerdefenseengine\tdeInterface\dataSystem\IDataSystem.cpp" />
     <ClCompile Include="towerdefenseengine\src\dataSystem\DataSystem.cpp" />
+    <ClCompile Include="towerdefenseengine\src\unit\GameUnit.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="towerdefenseengine\common\Vec2Real.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="towerdefenseengine\tdeInterface\dataSystem\IDataSystem.h">
       <SubType>
       </SubType>
@@ -149,8 +153,12 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="towerdefenseengine\tde\unit\GameUnit.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="towerdefenseengine\TypeDefs.h" />
-    <ClInclude Include="towerdefenseengine\common\Vec2.h" />
+    <ClInclude Include="towerdefenseengine\common\Vec.h" />
     <ClInclude Include="towerdefenseengine\tdeInterface\IGame.h" />
   </ItemGroup>
   <ItemGroup>

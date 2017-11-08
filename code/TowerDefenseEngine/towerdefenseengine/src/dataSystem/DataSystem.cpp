@@ -6,12 +6,17 @@
 namespace tde
 {
 
-char const* const DataSystem::ms_dataFolder = "../../data/";
-char const* const DataSystem::ms_rulesFolder = "../../data/Rules/";
-
-fl::Engine* DataSystem::LoadFuzzyEngine(char const* const path) const
+namespace
 {
-    std::string fullPath(ms_rulesFolder);
+
+static tdeString const dataFolder = "../../data/";
+static tdeString const rulesFolder = dataFolder + tdeString("Rules/");
+
+} // namespace
+
+fl::Engine* CDataSystem::LoadFuzzyEngine(tdeString const& path) const
+{
+    std::string fullPath(rulesFolder);
     fullPath.append(path);
 
     fl::FllImporter fllImporter;
@@ -20,4 +25,4 @@ fl::Engine* DataSystem::LoadFuzzyEngine(char const* const path) const
     return engine;
 }
 
-}
+} // tde

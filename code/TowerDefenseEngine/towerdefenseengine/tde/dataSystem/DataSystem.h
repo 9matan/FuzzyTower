@@ -6,16 +6,14 @@
 namespace tde
 {
     
-class DataSystem
+class CDataSystem
     : public IDataSystem
 {
 
 public:
-    virtual fl::Engine* LoadFuzzyEngine(char const* const path) const override;
-
-private:
-    static char const* const ms_dataFolder;
-    static char const* const ms_rulesFolder;
+    virtual void Initialize() override {}
+    virtual fl::Engine* LoadFuzzyEngine(tdeString const& path) const override;
+    virtual void Clear() override {}
 
 };
 

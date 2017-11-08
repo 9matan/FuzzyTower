@@ -15,10 +15,9 @@ namespace tde
 class IDataSystem abstract
 {
 public:
-    static IDataSystem const* const GetInstance();
-    static void SetInstance(IDataSystem* dataSystem);
-
-    virtual fl::Engine* LoadFuzzyEngine(char const* const path) const = 0;
+    virtual void Initialize() = 0;
+    virtual fl::Engine* LoadFuzzyEngine(tdeString const& path) const = 0;
+    virtual void Clear() = 0;
 
 private:
     static IDataSystem* ms_instance;

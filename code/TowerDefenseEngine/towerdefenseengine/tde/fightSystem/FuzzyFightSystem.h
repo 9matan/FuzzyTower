@@ -14,15 +14,24 @@ class Engine;
 namespace tde
 {
     
-class FuzzyFightSystem
+class IDataSystem;
+
+class CFuzzyFightSystem
     : public IFightSystem
 {
 public:
-    void LoadRules();
-    virtual void Fight(ICombatTower& tower, ICombatWarrior& warrior) const override;
+    CFuzzyFightSystem(tdeString const& fightRulesFile);
+
+    virtual void Initialize(CSharedPtr<IDataSystem> const& dataSystem) override;
+    virtual tdeBool Fight(ICombatTower& tower, ICombatWarrior& warrior) const override;
+    virtual void Clear() override;
 
 private:
-    fl::Engine* m_fightRulesEngine;
+    CUniquePtr<fl::Engine> m_fightRulesEngine;
+    tdeString m_fightRulesFile;
+
+private:
+    void LoadRules(CSharedPtr<IDataSystem> const& dataSystem);
 };
 
 } // tde

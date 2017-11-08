@@ -4,14 +4,9 @@
 
 int main(int argc, const char* argv[])
 {
-    tde::DataSystem dataSystem;
-    tde::IDataSystem::SetInstance(&dataSystem);
-
+    tde::CDataSystem dataSystem;
     auto engine = dataSystem.LoadFuzzyEngine("DamageLogic.fll");
-
     auto name = engine->getName();
-
-    tde::IDataSystem::SetInstance(nullptr);
 
     return 0;
 }

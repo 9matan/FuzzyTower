@@ -1,16 +1,14 @@
 #pragma once
 
-#include "TypeDefs.h"
-
 #include "tdeInterface/unit/IGameUnit.h"
-#include "tdeInterface/unit/tower/ICombatTower.h"
+#include "tdeInterface/combatSystem/ICombatAttacker.h"
 
 namespace tde
 {
     
 class ITower abstract
     : public IGameUnit
-    , public ICombatTower
+    , public ICombatAttacker
 {
 public:
 

@@ -1,7 +1,5 @@
 #pragma once
 
-#include "TypeDefs.h"
-
 #include "tdeInterface/unit/IGameUnit.h"
 
 namespace tde

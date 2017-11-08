@@ -69,7 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)towerdefenseengine;$(SolutionDir)FuzzyLite\fuzzylite\fuzzylite</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <OutDir>$(SolutionDir)..\bin\$(Configuration)</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -77,6 +77,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;TDE_USE_FUZZYLITE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)towerdefenseengine;$(SolutionDir)FuzzyLite\fuzzylite\fuzzylite</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>TowerDefenseEngine_PCH.h</PrecompiledHeaderFile>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -93,6 +97,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>TowerDefenseEngine_PCH.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -114,11 +120,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="towerdefenseengine\src\main.cpp" />
-    <ClCompile Include="towerdefenseengine\src\fightSystem\FuzzyFightSystem.cpp" />
+    <ClCompile Include="towerdefenseengine\src\combatSystem\FuzzyCombatSystem.cpp" />
     <ClCompile Include="towerdefenseengine\src\dataSystem\DataSystem.cpp" />
     <ClCompile Include="towerdefenseengine\src\unit\GameUnit.cpp" />
+    <ClCompile Include="towerdefenseengine\src\unit\tower\Tower.cpp" />
+    <ClCompile Include="towerdefenseengine\src\unit\warrior\Warrior.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="towerdefenseengine\test\CombatSystemTest.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="towerdefenseengine\TowerDefenseEngine_PCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="towerdefenseengine\common\Assert.h" />
+    <ClInclude Include="towerdefenseengine\common\Log.h" />
+    <ClInclude Include="towerdefenseengine\common\Memory.h" />
     <ClInclude Include="towerdefenseengine\common\Vec2Real.h">
       <SubType>
       </SubType>
@@ -127,12 +149,13 @@
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="towerdefenseengine\tdeInterface\fightSystem\IFightSystem.h">
+    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\CombatDefs.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\ICombatSystem.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="towerdefenseengine\tdeInterface\unit\IGameUnit.h" />
-    <ClInclude Include="towerdefenseengine\tdeInterface\unit\tower\ICombatTower.h">
+    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\ICombatAttacker.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -140,7 +163,7 @@
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="towerdefenseengine\tdeInterface\unit\warrior\ICombatWarrior.h">
+    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\ICombatDefender.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -149,7 +172,7 @@
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="towerdefenseengine\tde\fightSystem\FuzzyFightSystem.h">
+    <ClInclude Include="towerdefenseengine\tde\combatSystem\FuzzyCombatSystem.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -157,7 +180,19 @@
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="towerdefenseengine\TypeDefs.h" />
+    <ClInclude Include="towerdefenseengine\tde\unit\tower\Tower.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="towerdefenseengine\tde\unit\tower\TowerConfig.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="towerdefenseengine\tde\unit\warrior\Warrior.h" />
+    <ClInclude Include="towerdefenseengine\tde\unit\warrior\WarriorConfig.h" />
+    <ClInclude Include="towerdefenseengine\test\Test.h" />
+    <ClInclude Include="towerdefenseengine\TowerDefenseEngine_PCH.h" />
+    <ClInclude Include="towerdefenseengine\common\TypeDefs.h" />
     <ClInclude Include="towerdefenseengine\common\Vec.h" />
     <ClInclude Include="towerdefenseengine\tdeInterface\IGame.h" />
   </ItemGroup>

@@ -1,4 +1,4 @@
-#include <string>
+#include "TowerDefenseEngine_PCH.h"
 
 #include "fl/imex/FllImporter.h"
 #include "tde/dataSystem/DataSystem.h"
@@ -14,6 +14,7 @@ static tdeString const rulesFolder = dataFolder + tdeString("Rules/");
 
 } // namespace
 
+#ifdef TDE_USE_FUZZYLITE
 fl::Engine* CDataSystem::LoadFuzzyEngine(tdeString const& path) const
 {
     std::string fullPath(rulesFolder);
@@ -24,5 +25,6 @@ fl::Engine* CDataSystem::LoadFuzzyEngine(tdeString const& path) const
 
     return engine;
 }
+#endif // TDE_USE_FUZZYLITE
 
 } // tde

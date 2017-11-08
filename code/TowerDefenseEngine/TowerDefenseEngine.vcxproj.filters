@@ -2,24 +2,38 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="towerdefenseengine\src\main.cpp" />
-    <ClCompile Include="towerdefenseengine\src\fightSystem\FuzzyFightSystem.cpp" />
     <ClCompile Include="towerdefenseengine\src\dataSystem\DataSystem.cpp" />
     <ClCompile Include="towerdefenseengine\src\unit\GameUnit.cpp" />
+    <ClCompile Include="towerdefenseengine\src\unit\tower\Tower.cpp" />
+    <ClCompile Include="towerdefenseengine\src\combatSystem\FuzzyCombatSystem.cpp" />
+    <ClCompile Include="towerdefenseengine\TowerDefenseEngine_PCH.cpp" />
+    <ClCompile Include="towerdefenseengine\src\unit\warrior\Warrior.cpp" />
+    <ClCompile Include="towerdefenseengine\test\CombatSystemTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="towerdefenseengine\tdeInterface\IGame.h" />
-    <ClInclude Include="towerdefenseengine\TypeDefs.h" />
     <ClInclude Include="towerdefenseengine\tdeInterface\unit\IGameUnit.h" />
     <ClInclude Include="towerdefenseengine\tdeInterface\unit\warrior\IWarrior.h" />
-    <ClInclude Include="towerdefenseengine\tdeInterface\unit\warrior\ICombatWarrior.h" />
-    <ClInclude Include="towerdefenseengine\tdeInterface\unit\tower\ICombatTower.h" />
     <ClInclude Include="towerdefenseengine\tdeInterface\unit\tower\ITower.h" />
-    <ClInclude Include="towerdefenseengine\tdeInterface\fightSystem\IFightSystem.h" />
-    <ClInclude Include="towerdefenseengine\tde\fightSystem\FuzzyFightSystem.h" />
     <ClInclude Include="towerdefenseengine\tdeInterface\dataSystem\IDataSystem.h" />
     <ClInclude Include="towerdefenseengine\tde\dataSystem\DataSystem.h" />
     <ClInclude Include="towerdefenseengine\tde\unit\GameUnit.h" />
     <ClInclude Include="towerdefenseengine\common\Vec.h" />
     <ClInclude Include="towerdefenseengine\common\Vec2Real.h" />
+    <ClInclude Include="towerdefenseengine\tde\unit\tower\Tower.h" />
+    <ClInclude Include="towerdefenseengine\tde\unit\tower\TowerConfig.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\CombatDefs.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\ICombatAttacker.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\ICombatDefender.h" />
+    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\ICombatSystem.h" />
+    <ClInclude Include="towerdefenseengine\tde\combatSystem\FuzzyCombatSystem.h" />
+    <ClInclude Include="towerdefenseengine\TowerDefenseEngine_PCH.h" />
+    <ClInclude Include="towerdefenseengine\tde\unit\warrior\Warrior.h" />
+    <ClInclude Include="towerdefenseengine\tde\unit\warrior\WarriorConfig.h" />
+    <ClInclude Include="towerdefenseengine\common\TypeDefs.h" />
+    <ClInclude Include="towerdefenseengine\common\Assert.h" />
+    <ClInclude Include="towerdefenseengine\common\Log.h" />
+    <ClInclude Include="towerdefenseengine\common\Memory.h" />
+    <ClInclude Include="towerdefenseengine\test\Test.h" />
   </ItemGroup>
 </Project>

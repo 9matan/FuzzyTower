@@ -1,7 +1,5 @@
 #pragma once
 
-#include "TypeDefs.h"
-
 namespace tde
 {
 

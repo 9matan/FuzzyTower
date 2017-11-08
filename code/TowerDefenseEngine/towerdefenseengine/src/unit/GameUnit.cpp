@@ -1,9 +1,9 @@
+#include "TowerDefenseEngine_PCH.h"
+
 #include "tde/unit/GameUnit.h"
 
 namespace tde
 {
-
-    
 
 CGameUnit::CGameUnit()
     : m_position(tdePos::GetZero())

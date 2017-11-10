@@ -3,7 +3,7 @@
 #include "tde/unit/warrior/Warrior.h"
 #include "tde/unit/warrior/WarriorConfig.h"
 
-namespace tde
+namespace TowerDefense
 {
 
 CWarrior::CWarrior(SWarriorConfig const& warriorConfig)
@@ -13,29 +13,39 @@ CWarrior::CWarrior(SWarriorConfig const& warriorConfig)
 {
 }
 
-tdeU32 const CWarrior::GetPhysicalDefense() const
+tdU32 const CWarrior::GetPhysicalDefense() const
 {
     return m_physicalDefense;
 }
 
-tdeU32 const CWarrior::GetMagicDefense() const
+tdU32 const CWarrior::GetMagicDefense() const
 {
     return m_magicDefense;
 }
 
-tdeU32 const CWarrior::GetHitPoints() const
+tdU32 const CWarrior::GetHitPoints() const
 {
     return m_hitPoints;
 }
 
-void CWarrior::TakeDamage(tdeU32 const damage)
+void CWarrior::TakeDamage(tdU32 const damage)
 {
-    m_hitPoints -= damage;
+    m_hitPoints = (m_hitPoints <= damage) ? 0 : m_hitPoints - damage;
 }
 
-tdeBool const CWarrior::IsAlive() const
+tdBool const CWarrior::IsAlive() const
 {
     return m_hitPoints != 0;
 }
 
-} //tde
+void CWarrior::SetPosition(tdPos const& position)
+{
+    m_gameUnit.SetPosition(position);
+}
+
+tdPos const CWarrior::GetPosition() const
+{
+    return m_gameUnit.GetPosition();
+}
+
+} // TowerDefense

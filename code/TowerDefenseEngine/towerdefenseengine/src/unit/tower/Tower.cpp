@@ -3,7 +3,7 @@
 #include "tde/unit/tower/Tower.h"
 #include "tde/unit/tower/TowerConfig.h"
 
-namespace tde
+namespace TowerDefense
 {
 
 CTower::CTower(STowerConfig const& towerConfig)
@@ -15,22 +15,22 @@ CTower::CTower(STowerConfig const& towerConfig)
 {
 }
 
-tdeU32 const CTower::GetMagicDamage() const
+SDamage const& CTower::GetMagicDamage() const
 {
     return m_magicDamage;
 }
 
-tdeU32 const CTower::GetMagicAttack() const
+tdU32 const CTower::GetMagicAttack() const
 {
     return m_magicAttack;
 }
 
-tdeU32 const CTower::GetPhysicalDamage() const
+SDamage const& CTower::GetPhysicalDamage() const
 {
     return m_physicalDamage;
 }
 
-tdeU32 const CTower::GetPhysicalAttack() const
+tdU32 const CTower::GetPhysicalAttack() const
 {
     return m_physicalAttack;
 }
@@ -40,4 +40,14 @@ EPhysicalDamageType const CTower::GetPhysicalDamageType() const
     return m_physicalDamageType;
 }
 
-};
+void CTower::SetPosition(tdPos const& position)
+{
+    m_gameUnit.SetPosition(position);
+}
+
+tdPos const CTower::GetPosition() const
+{
+    return m_gameUnit.GetPosition();
+}
+
+}; // TowerDefense

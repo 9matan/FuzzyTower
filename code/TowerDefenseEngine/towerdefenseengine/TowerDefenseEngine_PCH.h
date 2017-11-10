@@ -1,5 +1,3 @@
 #pragma once
 
-#include "common/Memory.h"
-#include "common/Assert.h"
-#include "common/TypeDefs.h"
+#include "tdCore/common/Common.h"

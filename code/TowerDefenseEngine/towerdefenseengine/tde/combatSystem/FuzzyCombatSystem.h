@@ -2,7 +2,7 @@
 
 #ifdef TDE_USE_FUZZYLITE
 
-#include "tdeInterface/combatSystem/ICombatSystem.h"
+#include "tdCore/combatSystem/ICombatSystem.h"
 
 namespace fl
 {
@@ -11,30 +11,31 @@ class Engine;
 
 } // fl
 
-namespace tde
+namespace TowerDefense
 {
-    
-class IDataSystem;
+
+struct SDamage;
 
 class CFuzzyCombatSystem
     : public ICombatSystem
 {
 public:
-    static tdeBool const IsValidRules(fl::Engine const& combatRules);
+    static tdBool const IsValidRules(fl::Engine const& combatRules);
 
 public:
     CFuzzyCombatSystem(CUniquePtr<fl::Engine> combatRules);
 
     virtual void Initialize() override;
-    virtual tdeBool Fight(ICombatAttacker& attacker, ICombatDefender& defender) const override;
+    virtual tdBool const Fight(ICombatAttacker& attacker, ICombatDefender& defender) const override;
     virtual void Clear() override;
-
-    
 
 private:
     CUniquePtr<fl::Engine> m_combatRules;
+
+private:
+    tdU32 const GetDamageValue(SDamage const& damage) const;
 };
 
-} // tde
+} // TowerDefense
 
 #endif // TDE_USE_FUZZYLITE

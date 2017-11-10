@@ -1,21 +1,24 @@
 #include "TowerDefenseEngine_PCH.h"
 
+#ifdef TDE_USE_FUZZYLITE
 #include "fl/imex/FllImporter.h"
+#endif // TDE_USE_FUZZYLITE
+
 #include "tde/dataSystem/DataSystem.h"
 
-namespace tde
+namespace TowerDefense
 {
 
 namespace
 {
 
-static tdeString const dataFolder = "../../data/";
-static tdeString const rulesFolder = dataFolder + tdeString("Rules/");
+static tdString const dataFolder = "../../data/";
+static tdString const rulesFolder = dataFolder + tdString("Rules/");
 
 } // namespace
 
 #ifdef TDE_USE_FUZZYLITE
-fl::Engine* CDataSystem::LoadFuzzyEngine(tdeString const& path) const
+fl::Engine* CDataSystem::LoadFuzzyEngine(tdString const& path) const
 {
     std::string fullPath(rulesFolder);
     fullPath.append(path);
@@ -27,4 +30,4 @@ fl::Engine* CDataSystem::LoadFuzzyEngine(tdeString const& path) const
 }
 #endif // TDE_USE_FUZZYLITE
 
-} // tde
+} // TowerDefense

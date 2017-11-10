@@ -1,21 +1,18 @@
 #pragma once
 
-#include "tdeInterface/unit/IGameUnit.h"
-
-namespace tde
+namespace TowerDefense
 {
     
 class CGameUnit
-    : public IGameUnit
 {
 public:
     CGameUnit();
 
-    void virtual SetPosition(tdePos const& position) override;
-    tdePos const virtual GetPosition() const override;
+    void SetPosition(tdPos const& position);
+    tdPos const GetPosition() const;
 
 private:
-    tdePos m_position;
+    tdPos m_position;
 };
 
-} // tde
+} // TowerDefense

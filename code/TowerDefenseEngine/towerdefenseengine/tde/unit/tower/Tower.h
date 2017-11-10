@@ -1,31 +1,37 @@
 #pragma once
-#include "tde/unit/GameUnit.h"
-#include "tdeInterface/unit/tower/ITower.h"
+#include "tdCore/unit/tower/ITower.h"
+#include "tdCore/combatSystem/CombatDefs.h"
 
-namespace tde
+#include "tde/unit/GameUnit.h"
+
+namespace TowerDefense
 {
 
 struct STowerConfig;
 
 class CTower
-    : public CGameUnit
-    , public ITower
+    : public ITower
 {
 public:
     CTower(STowerConfig const& towerConfig);
 
-    virtual tdeU32 const GetMagicDamage() const override;
-    virtual tdeU32 const GetMagicAttack() const override;
-    virtual tdeU32 const GetPhysicalDamage() const override;
-    virtual tdeU32 const GetPhysicalAttack() const override;
+    virtual SDamage const& GetMagicDamage() const override;
+    virtual tdU32 const GetMagicAttack() const override;
+    virtual SDamage const& GetPhysicalDamage() const override;
+    virtual tdU32 const GetPhysicalAttack() const override;
     virtual EPhysicalDamageType const GetPhysicalDamageType() const override;
 
+    virtual void SetPosition(tdPos const& position) override;
+    virtual tdPos const GetPosition() const override;
+
 private:
-    tdeU32 m_magicDamage;
-    tdeU32 m_magicAttack;
-    tdeU32 m_physicalDamage;
-    tdeU32 m_physicalAttack;
+    CGameUnit m_gameUnit;
+
+    SDamage m_magicDamage;
+    tdU32 m_magicAttack;
+    SDamage m_physicalDamage;
+    tdU32 m_physicalAttack;
     EPhysicalDamageType m_physicalDamageType;
 };
 
-} // tde
+} // TowerDefense

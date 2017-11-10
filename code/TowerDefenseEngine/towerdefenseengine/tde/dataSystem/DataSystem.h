@@ -1,21 +1,15 @@
 #pragma once
 
-#include "tdeInterface/dataSystem/IDataSystem.h"
-
-namespace tde
+namespace TowerDefense
 {
     
 class CDataSystem
-    : public IDataSystem
 {
-
 public:
-    virtual void Initialize() override {}
 #ifdef TDE_USE_FUZZYLITE
-    virtual fl::Engine* LoadFuzzyEngine(tdeString const& path) const override;
+    fl::Engine* LoadFuzzyEngine(tdString const& path) const;
 #endif // TDE_USE_FUZZYLITE
-    virtual void Clear() override {}
 
 };
 
-} // tde
+} // TowerDefense

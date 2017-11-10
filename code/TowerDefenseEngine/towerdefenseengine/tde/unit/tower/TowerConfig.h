@@ -1,18 +1,18 @@
 #pragma once
 
-#include "tdeInterface/combatSystem/CombatDefs.h"
+#include "tdCore/combatSystem/CombatDefs.h"
 
-namespace tde
+namespace TowerDefense
 {
     
 struct STowerConfig
 {
 public:
-    tdeU32 m_magicDamage;
-    tdeU32 m_magicAttack;
-    tdeU32 m_physicalDamage;
-    tdeU32 m_physicalAttack;
+    SDamage m_magicDamage;
+    tdU32 m_magicAttack;
+    SDamage m_physicalDamage;
+    tdU32 m_physicalAttack;
     EPhysicalDamageType m_physicalDamageType;
 };
 
-} // tde
+} // TowerDefense

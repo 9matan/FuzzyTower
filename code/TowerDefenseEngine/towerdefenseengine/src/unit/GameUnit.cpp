@@ -2,22 +2,22 @@
 
 #include "tde/unit/GameUnit.h"
 
-namespace tde
+namespace TowerDefense
 {
 
 CGameUnit::CGameUnit()
-    : m_position(tdePos::GetZero())
+    : m_position(tdPos::GetZero())
 {
 }
 
-void CGameUnit::SetPosition(tdePos const& position)
+void CGameUnit::SetPosition(tdPos const& position)
 {
     m_position = position;
 }
 
-tdePos const CGameUnit::GetPosition() const
+tdPos const CGameUnit::GetPosition() const
 {
     return m_position;
 }
 
-} // tde
+} // TowerDefense

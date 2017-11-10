@@ -78,7 +78,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_MBCS;TDE_USE_FUZZYLITE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)towerdefenseengine;$(SolutionDir)FuzzyLite\fuzzylite\fuzzylite</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)towerdefenseengine;$(SolutionDir)FuzzyLite\fuzzylite\fuzzylite;$(SolutionDir)TowerDefenseCore\towerdefensecore</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>TowerDefenseEngine_PCH.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -128,7 +128,7 @@
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="towerdefenseengine\test\CombatSystemTest.cpp">
+    <ClCompile Include="towerdefenseengine\srcTest\FuzzyCombatSystemTest.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -138,36 +138,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="towerdefenseengine\common\Assert.h" />
-    <ClInclude Include="towerdefenseengine\common\Log.h" />
-    <ClInclude Include="towerdefenseengine\common\Memory.h" />
-    <ClInclude Include="towerdefenseengine\common\Vec2Real.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="towerdefenseengine\tdeInterface\dataSystem\IDataSystem.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\CombatDefs.h" />
-    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\ICombatSystem.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="towerdefenseengine\tdeInterface\unit\IGameUnit.h" />
-    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\ICombatAttacker.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="towerdefenseengine\tdeInterface\unit\tower\ITower.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="towerdefenseengine\tdeInterface\combatSystem\ICombatDefender.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="towerdefenseengine\tdeInterface\unit\warrior\IWarrior.h" />
     <ClInclude Include="towerdefenseengine\tde\dataSystem\DataSystem.h">
       <SubType>
       </SubType>
@@ -190,15 +160,15 @@
     </ClInclude>
     <ClInclude Include="towerdefenseengine\tde\unit\warrior\Warrior.h" />
     <ClInclude Include="towerdefenseengine\tde\unit\warrior\WarriorConfig.h" />
-    <ClInclude Include="towerdefenseengine\test\Test.h" />
+    <ClInclude Include="towerdefenseengine\tdeTest\FuzzyCombatSystemTest.h" />
     <ClInclude Include="towerdefenseengine\TowerDefenseEngine_PCH.h" />
-    <ClInclude Include="towerdefenseengine\common\TypeDefs.h" />
-    <ClInclude Include="towerdefenseengine\common\Vec.h" />
-    <ClInclude Include="towerdefenseengine\tdeInterface\IGame.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FuzzyLite\FuzzyLite.vcxproj">
       <Project>{97fad1e7-d140-4fdf-85f3-81546a6cef39}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TowerDefenseCore\TowerDefenseCore.vcxproj">
+      <Project>{95d5a774-55b5-4b5d-9c55-645791cc759b}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,14 +1,14 @@
 #pragma once
 
-namespace tde
+namespace TowerDefense
 {
 
 struct SWarriorConfig
 {
 public:
-    tdeU32 m_physicalDefense;
-    tdeU32 m_magicDefense;
-    tdeU32 m_hitPoints;
+    tdU32 m_physicalDefense;
+    tdU32 m_magicDefense;
+    tdU32 m_hitPoints;
 };
 
-} // tde
+} // TowerDefense

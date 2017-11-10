@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FuzzyLite", "FuzzyLite\Fuzz
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TowerDefenseEngine", "TowerDefenseEngine\TowerDefenseEngine.vcxproj", "{0B5AD916-7CAF-437A-8750-FB5C74EED8D8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TowerDefenseCore", "TowerDefenseCore\TowerDefenseCore.vcxproj", "{95D5A774-55B5-4B5D-9C55-645791CC759B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{0B5AD916-7CAF-437A-8750-FB5C74EED8D8}.Release|x64.Build.0 = Release|x64
 		{0B5AD916-7CAF-437A-8750-FB5C74EED8D8}.Release|x86.ActiveCfg = Release|Win32
 		{0B5AD916-7CAF-437A-8750-FB5C74EED8D8}.Release|x86.Build.0 = Release|Win32
+		{95D5A774-55B5-4B5D-9C55-645791CC759B}.Debug|x64.ActiveCfg = Debug|x64
+		{95D5A774-55B5-4B5D-9C55-645791CC759B}.Debug|x64.Build.0 = Debug|x64
+		{95D5A774-55B5-4B5D-9C55-645791CC759B}.Debug|x86.ActiveCfg = Debug|Win32
+		{95D5A774-55B5-4B5D-9C55-645791CC759B}.Debug|x86.Build.0 = Debug|Win32
+		{95D5A774-55B5-4B5D-9C55-645791CC759B}.Release|x64.ActiveCfg = Release|x64
+		{95D5A774-55B5-4B5D-9C55-645791CC759B}.Release|x64.Build.0 = Release|x64
+		{95D5A774-55B5-4B5D-9C55-645791CC759B}.Release|x86.ActiveCfg = Release|Win32
+		{95D5A774-55B5-4B5D-9C55-645791CC759B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

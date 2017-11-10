@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="towerdefensecore\tdCore\combatSystem\CombatDefs.h" />
+    <ClInclude Include="towerdefensecore\tdCore\combatSystem\Damage.h" />
+    <ClInclude Include="towerdefensecore\tdCore\combatSystem\ICombatAttacker.h" />
+    <ClInclude Include="towerdefensecore\tdCore\combatSystem\ICombatDefender.h" />
+    <ClInclude Include="towerdefensecore\tdCore\combatSystem\ICombatSystem.h" />
+    <ClInclude Include="towerdefensecore\tdCore\common\math\Vec.h" />
+    <ClInclude Include="towerdefensecore\tdCore\common\math\Vec2Real.h" />
+    <ClInclude Include="towerdefensecore\tdCore\common\Assert.h" />
+    <ClInclude Include="towerdefensecore\tdCore\common\Common.h" />
+    <ClInclude Include="towerdefensecore\tdCore\common\Log.h" />
+    <ClInclude Include="towerdefensecore\tdCore\common\Memory.h" />
+    <ClInclude Include="towerdefensecore\tdCore\common\TypeDefs.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\tower\ITower.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\warrior\IWarrior.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\IGameUnit.h" />
+    <ClInclude Include="towerdefensecore\tdCore\IGame.h" />
+    <ClInclude Include="towerdefensecore\tdCoreTest\CombatSystemTest.h" />
+    <ClInclude Include="towerdefensecore\tdCoreTest\Test.h" />
+    <ClInclude Include="towerdefensecore\TowerDefenseCore_PCH.h" />
+    <ClInclude Include="towerdefensecore\tdCore\common\math\Math.h" />
+    <ClInclude Include="towerdefensecore\tdCore\common\Random.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="towerdefensecore\TowerDefenseCore_PCH.cpp" />
+    <ClCompile Include="towerdefensecore\srcTest\CombatSystemTest.cpp" />
+    <ClCompile Include="towerdefensecore\src\combatSystem\Damage.cpp" />
+  </ItemGroup>
+</Project>

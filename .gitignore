@@ -152,5 +152,6 @@ install_manifest.txt
 .vs/
 Debug/
 bin/
+ipch/
 *.db
 *.opendb

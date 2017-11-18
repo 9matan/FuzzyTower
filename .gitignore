@@ -148,9 +148,10 @@ Makefile
 cmake_install.cmake
 install_manifest.txt
 
-### FuzzyTower ###
+### Visual studio ###
 .vs/
-Debug/
+Debug*/
+Release*/
 bin/
 *.db
 *.opendb

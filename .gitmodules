@@ -2,5 +2,5 @@
 	path = FuzzyLite/fuzzylite
 	url = https://github.com/9matan/fuzzylite.git
 [submodule "code/FuzzyLite/fuzzylite"]
-	path = code/FuzzyLite/fuzzylite
+	path = FuzzyTowerEngine/FuzzyLite/fuzzylite
 	url = https://github.com/9matan/fuzzylite.git

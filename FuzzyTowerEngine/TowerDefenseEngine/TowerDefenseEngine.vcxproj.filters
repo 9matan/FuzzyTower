@@ -9,6 +9,7 @@
     <ClCompile Include="towerdefenseengine\TowerDefenseEngine_PCH.cpp" />
     <ClCompile Include="towerdefenseengine\src\unit\warrior\Warrior.cpp" />
     <ClCompile Include="towerdefenseengine\srcTest\FuzzyCombatSystemTest.cpp" />
+    <ClCompile Include="towerdefenseengine\src\Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="towerdefenseengine\tde\dataSystem\DataSystem.h" />
@@ -20,5 +21,6 @@
     <ClInclude Include="towerdefenseengine\tde\unit\warrior\Warrior.h" />
     <ClInclude Include="towerdefenseengine\tde\unit\warrior\WarriorConfig.h" />
     <ClInclude Include="towerdefenseengine\tdeTest\FuzzyCombatSystemTest.h" />
+    <ClInclude Include="towerdefenseengine\tde\Game.h" />
   </ItemGroup>
 </Project>

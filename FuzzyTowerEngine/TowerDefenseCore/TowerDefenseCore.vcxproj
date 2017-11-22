@@ -145,17 +145,31 @@
     <ClInclude Include="towerdefensecore\tdCore\common\Common.h" />
     <ClInclude Include="towerdefensecore\tdCore\common\Log.h" />
     <ClInclude Include="towerdefensecore\tdCore\common\math\Math.h" />
-    <ClInclude Include="towerdefensecore\tdCore\common\Random.h" />
     <ClInclude Include="towerdefensecore\tdCore\common\math\Vec.h" />
     <ClInclude Include="towerdefensecore\tdCore\common\math\Vec2Real.h" />
-    <ClInclude Include="towerdefensecore\tdCore\common\Memory.h" />
     <ClInclude Include="towerdefensecore\tdCore\common\TypeDefs.h" />
     <ClInclude Include="towerdefensecore\tdCore\IGame.h" />
     <ClInclude Include="towerdefensecore\tdCoreTest\CombatSystemTest.h" />
     <ClInclude Include="towerdefensecore\tdCoreTest\Test.h" />
     <ClInclude Include="towerdefensecore\tdCore\unit\IGameUnit.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\tower\ISpawnedTower.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="towerdefensecore\tdCore\unit\tower\ITower.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\tower\ITowerSpawner.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="towerdefensecore\tdCore\unit\warrior\ISpawnedWarrior.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="towerdefensecore\tdCore\unit\warrior\IWarrior.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\warrior\IWarriorSpawner.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="towerdefensecore\TowerDefenseCore_PCH.h" />
   </ItemGroup>
   <ItemGroup>

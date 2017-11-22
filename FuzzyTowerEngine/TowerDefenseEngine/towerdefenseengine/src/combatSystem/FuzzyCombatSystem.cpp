@@ -18,13 +18,13 @@ namespace TowerDefense
 namespace
 {
 
-static tdString const MAGIC_ATTACK = "MagicAttack";
-static tdString const MAGIC_DEFENSE = "MagicDefense";
-static tdString const MAGIC_DAMAGE_COEF = "MagicDamageCoef";
+static std::string const MAGIC_ATTACK = "MagicAttack";
+static std::string const MAGIC_DEFENSE = "MagicDefense";
+static std::string const MAGIC_DAMAGE_COEF = "MagicDamageCoef";
 
 } // namespace
 
-CFuzzyCombatSystem::CFuzzyCombatSystem(CUniquePtr<fl::Engine> combatRules)
+CFuzzyCombatSystem::CFuzzyCombatSystem(std::unique_ptr<fl::Engine> combatRules)
     : m_combatRules(move(combatRules))
 {
     TD_ASSERT(IsValidRules(*m_combatRules), "Invalid combat rules");

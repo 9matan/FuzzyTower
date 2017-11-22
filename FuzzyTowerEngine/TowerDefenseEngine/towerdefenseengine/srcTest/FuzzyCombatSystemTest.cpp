@@ -18,7 +18,7 @@ TD_BEGIN_TEST(TestFuzzyCombatSystem, fl::Engine const& originRules)
             TD_TEST_FAILED("Invalid rules");
         }
 
-        CUniquePtr<fl::Engine> rules{TD_NEW fl::Engine(originRules)};
+        std::unique_ptr<fl::Engine> rules{new fl::Engine(originRules)};
         CFuzzyCombatSystem combatSystem(move(rules));
 
         TD_TEST_PASSED("");

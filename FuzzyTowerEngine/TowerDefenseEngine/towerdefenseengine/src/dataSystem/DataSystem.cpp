@@ -12,13 +12,13 @@ namespace TowerDefense
 namespace
 {
 
-static tdString const dataFolder = "../../data/";
-static tdString const rulesFolder = dataFolder + tdString("Rules/");
+static std::string const dataFolder = "../../Resources/";
+static std::string const rulesFolder = dataFolder + std::string("Rules/");
 
 } // namespace
 
 #ifdef TDE_USE_FUZZYLITE
-fl::Engine* CDataSystem::LoadFuzzyEngine(tdString const& path) const
+fl::Engine* CDataSystem::LoadFuzzyEngine(std::string const& path) const
 {
     std::string fullPath(rulesFolder);
     fullPath.append(path);

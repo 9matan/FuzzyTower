@@ -7,7 +7,7 @@ class CDataSystem
 {
 public:
 #ifdef TDE_USE_FUZZYLITE
-    fl::Engine* LoadFuzzyEngine(tdString const& path) const;
+    fl::Engine* LoadFuzzyEngine(std::string const& path) const;
 #endif // TDE_USE_FUZZYLITE
 
 };

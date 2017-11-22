@@ -11,7 +11,6 @@
     <ClInclude Include="towerdefensecore\tdCore\common\Assert.h" />
     <ClInclude Include="towerdefensecore\tdCore\common\Common.h" />
     <ClInclude Include="towerdefensecore\tdCore\common\Log.h" />
-    <ClInclude Include="towerdefensecore\tdCore\common\Memory.h" />
     <ClInclude Include="towerdefensecore\tdCore\common\TypeDefs.h" />
     <ClInclude Include="towerdefensecore\tdCore\unit\tower\ITower.h" />
     <ClInclude Include="towerdefensecore\tdCore\unit\warrior\IWarrior.h" />
@@ -21,7 +20,10 @@
     <ClInclude Include="towerdefensecore\tdCoreTest\Test.h" />
     <ClInclude Include="towerdefensecore\TowerDefenseCore_PCH.h" />
     <ClInclude Include="towerdefensecore\tdCore\common\math\Math.h" />
-    <ClInclude Include="towerdefensecore\tdCore\common\Random.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\tower\ITowerSpawner.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\warrior\IWarriorSpawner.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\tower\ISpawnedTower.h" />
+    <ClInclude Include="towerdefensecore\tdCore\unit\warrior\ISpawnedWarrior.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="towerdefensecore\TowerDefenseCore_PCH.cpp" />

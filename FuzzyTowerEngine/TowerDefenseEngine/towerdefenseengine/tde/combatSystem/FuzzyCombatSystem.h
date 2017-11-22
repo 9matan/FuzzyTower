@@ -23,14 +23,14 @@ public:
     static tdBool const IsValidRules(fl::Engine const& combatRules);
 
 public:
-    CFuzzyCombatSystem(CUniquePtr<fl::Engine> combatRules);
+    CFuzzyCombatSystem(std::unique_ptr<fl::Engine> combatRules);
 
     virtual void Initialize() override;
     virtual tdBool const Fight(ICombatAttacker& attacker, ICombatDefender& defender) const override;
     virtual void Clear() override;
 
 private:
-    CUniquePtr<fl::Engine> m_combatRules;
+    std::unique_ptr<fl::Engine> m_combatRules;
 
 private:
     tdU32 const GetDamageValue(SDamage const& damage) const;
